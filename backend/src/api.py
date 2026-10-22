@@ -100,7 +100,10 @@ app = FastAPI(
 )
 
 # CORS configuration: Allow frontend local dev and production hosting
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+ALLOWED_ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS", 
+    "https://barca-match-predictor.vercel.app,http://localhost:5173,http://localhost:3000"
+).split(",")
 
 app.add_middleware(
     CORSMiddleware,

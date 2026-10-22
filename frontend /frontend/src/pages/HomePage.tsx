@@ -144,7 +144,7 @@ export function PredictorPage() {
     setLoading(true);
     setRevealed(false);
     try {
-      const apiUrl = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+      const apiUrl = (import.meta.env.VITE_API_URL || "https://barca-match-predictor-c168.onrender.com").replace(/\/$/, "");
       const response = await fetch(`${apiUrl}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

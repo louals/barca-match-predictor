@@ -1,0 +1,17 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+
+
+# OS artifacts
+.DS_Store

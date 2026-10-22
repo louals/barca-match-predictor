@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+
+    /* Light Theme (Default) */
+    --color-surface: #fafafa;
+    --color-surface-card: #ffffff;
+    --color-surface-muted: #f4f4f5;
+    --color-border: #e4e4e7;
+    --color-ink: #09090b;
+    --color-ink-muted: #71717a;
+    --color-brand: #3b82f6;
+    --color-brand-hover: #2563eb;
+    --color-ring: rgba(59, 130, 246, 0.4);
+  }
+
+  .dark {
+    /* Dark Theme */
+    --color-surface: #09090b;
+    --color-surface-card: #18181b;
+    --color-surface-muted: #27272a;
+    --color-border: #27272a;
+    --color-ink: #f4f4f5;
+    --color-ink-muted: #a1a1aa;
+    --color-brand: #60a5fa;
+    --color-brand-hover: #3b82f6;
+    --color-ring: rgba(96, 165, 250, 0.4);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Custom utility variables for Tailwind */
+  .bg-surface { background-color: var(--color-surface); }
+  .bg-surface-card { background-color: var(--color-surface-card); }
+  .bg-surface-muted { background-color: var(--color-surface-muted); }
+  .text-ink { color: var(--color-ink); }
+  .text-ink-muted { color: var(--color-ink-muted); }
+  .border-theme { border-color: var(--color-border); }
+  .focus-ring {
+    outline: none;
+  }
+  .focus-ring:focus-visible {
+    box-shadow: 0 0 0 3px var(--color-ring);
+  }
+  @keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}       
+}
